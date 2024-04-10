@@ -4,17 +4,22 @@ import ayana_kaldybayeva.entity.Category;
 import jakarta.persistence.*;
 
 import java.util.List;
+import java.util.Scanner;
 
-public class AddCategory {
-    public static void main(String[] args) {
+public class ListSubcategories {
+    public static void subcategories() {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("main");
         EntityManager manager = factory.createEntityManager();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите название категорий: ");
+        String categoryName = scanner.nextLine();
 
         TypedQuery<Category> firstQuery = manager.createQuery(
-                "select c from Category c where c.name = ?1", Category.class
+                "select c from Category c where c.name = ?1 order by left_key", Category.class
         );
 
-        firstQuery.setParameter(1, "Наушники");
+        firstQuery.setParameter(1, categoryName);
 
         try {
             Category parentCategory = firstQuery.getSingleResult();

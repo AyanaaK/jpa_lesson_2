@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.util.Scanner;
 
 public class Move {
-    public static void main(String[] args) {
+    public static void move() {
         // Введите id перемещаемой категории: 2
         // Введите id новой родительской категории: 7
 

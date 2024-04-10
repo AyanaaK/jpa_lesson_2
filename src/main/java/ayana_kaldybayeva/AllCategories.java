@@ -5,13 +5,13 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
-public class Arrange {
-    public static void main(String[] args) {
+public class AllCategories {
+    public static void all() {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("main");
         EntityManager manager = factory.createEntityManager();
 
         TypedQuery<Category> query = manager.createQuery(
-                "select c from Category c", Category.class
+                "select c from Category c order by left_key", Category.class
         );
         List<Category> categories = query.getResultList();
 

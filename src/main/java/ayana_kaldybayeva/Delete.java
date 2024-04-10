@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import java.util.Scanner;
 
 public class Delete {
-    public static void main(String[] args) {
+    public static void delete() {
         //удаление категории, все вложенные категории тоже должны удалиться и ключи встать на место тоже
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("main");

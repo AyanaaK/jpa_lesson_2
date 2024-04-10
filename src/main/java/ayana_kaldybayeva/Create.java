@@ -3,12 +3,11 @@ package ayana_kaldybayeva;
 import ayana_kaldybayeva.entity.Category;
 import jakarta.persistence.*;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Create {
 
-    public static void main(String[] args) {
+    public static void create() {
         // Введите id родительской категории: 2
         // Введите название новой категории: МЦСТ
 
@@ -16,6 +15,7 @@ public class Create {
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("main");
         EntityManager manager = factory.createEntityManager();
+        //через getInstance
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите id родительской категорий: ");
