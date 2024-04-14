@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 
 public class EntityManagerFactoryHolder {
     private static EntityManagerFactory factory = null;
-//    private static EntityManager manager = null;
 
     public static EntityManagerFactory factory() {
         if (factory == null) {
@@ -12,11 +11,4 @@ public class EntityManagerFactoryHolder {
         }
         return factory;
     }
-
-//    public static EntityManager manager() {
-//        if (manager == null){
-//            manager = factory().createEntityManager();
-//        }
-//        return manager;
-//    }
 }
