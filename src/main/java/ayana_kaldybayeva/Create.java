@@ -13,9 +13,9 @@ public class Create {
 
         // Все ключи которые больше либо равны правому ключу роительской категории должны быть увеличины на 2.
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("main");
+        EntityManagerFactory factory = EntityManagerFactoryHolder.factory();
         EntityManager manager = factory.createEntityManager();
-        //через getInstance
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите id родительской категорий: ");

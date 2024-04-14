@@ -7,7 +7,7 @@ import java.util.List;
 
 public class AllCategories {
     public static void all() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("main");
+        EntityManagerFactory factory = EntityManagerFactoryHolder.factory();
         EntityManager manager = factory.createEntityManager();
 
         TypedQuery<Category> query = manager.createQuery(

@@ -10,7 +10,7 @@ public class Move {
         // Введите id перемещаемой категории: 2
         // Введите id новой родительской категории: 7
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("main");
+        EntityManagerFactory factory = EntityManagerFactoryHolder.factory();
         EntityManager manager = factory.createEntityManager();
         Scanner scanner = new Scanner(System.in);
 

@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class ListSubcategories {
     public static void subcategories() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("main");
+        EntityManagerFactory factory = EntityManagerFactoryHolder.factory();
         EntityManager manager = factory.createEntityManager();
         Scanner scanner = new Scanner(System.in);
 

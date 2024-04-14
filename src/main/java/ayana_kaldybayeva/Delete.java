@@ -9,7 +9,7 @@ public class Delete {
     public static void delete() {
         //удаление категории, все вложенные категории тоже должны удалиться и ключи встать на место тоже
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("main");
+        EntityManagerFactory factory = EntityManagerFactoryHolder.factory();
         EntityManager manager = factory.createEntityManager();
         Scanner scanner = new Scanner(System.in);
 
