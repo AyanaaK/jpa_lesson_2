@@ -22,18 +22,18 @@ public class Main {
                 case 1:
                     Create.create();
                     break;
-//                case 2:
-//                    Delete.delete();
-//                    break;
-//                case 3:
-//                    Move.move();
-//                    break;
-//                case 4:
-//                    AllCategories.all();
-//                    break;
-//                case 5:
-//                    ListSubcategories.subcategories();
-//                    break;
+                case 2:
+                    Delete.delete();
+                    break;
+                case 3:
+                    Move.move();
+                    break;
+                case 4:
+                    AllCategories.all();
+                    break;
+                case 5:
+                    ListSubcategories.subcategories();
+                    break;
                 case 6:
                     System.out.println("Вы вышли из программы");
                     return;
